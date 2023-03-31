@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=Secular+One&display=swap');
+
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria:#F6F6F6;
+    --cor-terciaria:#22D4FD;
+    --cor-hover:#272727;
+    --font-primaria: Secular One, sans serif;
+    --font-secundaria: Golos Text, sans serif;
+}
+
+* { margin: 0;
+    padding: 0;
+
+}
+body { 
+    /* height: 100hv;  */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho {
+    padding: 2% 0% 0% 15%; /*superior, direito, inferior, esquerdo */
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: Golos Text, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+.apresentacao { 
+    gap: 82px;
+    padding: 5% 15%; /* horizontal, vertical */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.apresentacao__conteudo { width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*A define o tamanho do espaço entre as linhas e entre as colunas no layout flexbox, grid ou multi-coluna*/
+
+}
+.apresentacao__conteudo__titulo {
+    font-family: Secular One;
+    font-size: 2.25rem; /* 1 rem equivale a 16px */
+}
+.titulo-destaque { color: var(--cor-terciaria);
+}
+.apresentacao__conteudo__texto {
+    font-family: Golos Text;
+    font-size: 2.25rem;
+}
+span {
+    color: #22D4FD;
+    border: 1px solid #22D4FD;
+    padding: 10px;
+}
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;  /*Direção dos objetos */
+    justify-content: space-between;  /*Espaço entre os objetos*/
+    align-items: center; /*alinhar os itens no centro ou nas margens */
+    gap: 32px; /*espaçamento entre os elementos conteiner*/
+}
+.apresentacao__links__subtitulo{
+    font-family: Golos Text, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+ /*{
+    font-family: Golos Text, sans-serif;
+    background-color: #22D4FD;
+    width: 280px;  /*tamanho dos objetos
+    text-align: center; /*alinhamento do texto
+    border-radius: 16px;  /*arredondamento das pontas
+    font-weight: 600; /*Peso da fonte
+    font-size: 24px;  /*tamanho da fonte
+    padding: 21.5px 0;  /*Preenchimento entre o texto e a borda
+    color:#000000;
+    text-decoration: none;  /*remover a cor do link
+} */
+.apresentacao__links_navegacao {
+    display: flex;
+    justify-content: center;
+    
+    font-family: Golos Text, sans-serif;
+    
+    width: 50%;  /*tamanho dos objetos "em relação ao tamanho pai ocupando a metade de qualquer tela"*/ 
+    text-align: center; /*alinhamento do texto*/
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;  /*arredondamento das pontas*/
+    font-weight: 600; /*Peso da fonte*/
+    font-size: 1.5rem;  /*tamanho da fonte*/
+    padding: 21.5px 0;  /*Preenchimento entre o texto e a borda*/
+    color:var(--cor-secundaria);
+    text-decoration: none;  /*remover a cor do link*/
+}
+.apresentacao__links_link:hover{
+    background-color: var(--cor-hover);
+}
+.apresentacao__imagem{
+    width: 50%
+}
+.rodape{
+    font-family: Golos Text, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;   
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+}
